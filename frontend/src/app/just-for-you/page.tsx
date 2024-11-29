@@ -88,7 +88,7 @@ useEffect(() => {
               fontSize: `${1 + Math.random() * 2}rem`,
             }}
           >
-            i
+            ❤️
           </div>
         ))}
       </div>
