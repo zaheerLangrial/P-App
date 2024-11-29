@@ -12,3 +12,14 @@ export type ReasonType = {
     title : number;
     reason : number
 }
+
+export type IPbutton = {
+    path: string;
+    text: string;
+}
+
+export type IPQuestions = {
+    id: number;
+    question_text: string
+    question_ans: boolean | null
+}

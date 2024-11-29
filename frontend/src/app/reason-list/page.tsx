@@ -1,7 +1,7 @@
 "use client";
 
+import Button from '@/components/Button';
 import { SetArrayToStringArray } from '@/utils/Functions';
-import { ReasonType } from '@/utils/types';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -56,12 +56,10 @@ const ReasonList = () => {
           <p className="text-xl mb-4 font-semibold">
             We hope you've enjoyed this so far. 
           </p>
-          <button
-            onClick={() => window.location.href = '/next-step'} // Update with actual next page URL
-            className="bg-white text-pink-700 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-100 transition"
-          >
-            Please proceed to the next step
-          </button>
+          <Button
+            path='/interested' text='Please proceed to the next step' // Update with actual next page URL
+            // className="bg-white text-pink-700 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-100 transition"
+          />
         </div>
       )}
 
@@ -77,7 +75,7 @@ const ReasonList = () => {
               fontSize: `${0.8 + Math.random() * 1.5}rem`
             }}
           >
-            ❤️
+            i
           </div>
         ))}
       </div>

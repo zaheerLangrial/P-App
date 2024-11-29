@@ -6,5 +6,8 @@ from .models import *
 
 admin.site.register(FavName)
 admin.site.register(ReasonList)
+admin.site.register(AboutMe)
+admin.site.register(Question)
+admin.site.register(RequestResponse)
 
 

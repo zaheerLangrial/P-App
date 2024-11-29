@@ -1,6 +1,9 @@
+import Button from '@/components/Button';
 import Head from 'next/head';
 
+
 export default function Home() {
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 to-pink-500">
     <Head>
@@ -11,9 +14,7 @@ export default function Home() {
       <p className="text-lg mb-8">
         Get ready for a journey filled with surprises. Click the button to continue.
       </p>
-      <a href="/just-for-you" className="bg-white text-purple-700 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-purple-100">
-        Continue
-      </a>
+      <Button path="/just-for-you" text='Continue' />
     </div>
   </div>
   );
