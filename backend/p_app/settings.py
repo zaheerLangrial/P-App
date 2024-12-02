@@ -43,11 +43,17 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://18.141.225.196:3000",  # Add the origin of your frontend here
+    'http://18.141.225.196:3000',
+    'https://18.141.225.196:3000',   # Add the origin of your frontend here
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://18.141.225.196:3000',
+    'https://18.141.225.196:3000',  # If your frontend uses HTTPS
+]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
