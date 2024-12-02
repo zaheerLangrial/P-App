@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const ThankYou = () => {
   const [agree, setAgree] = useState<boolean>()
@@ -48,11 +49,13 @@ const ThankYou = () => {
       </div>
 
       <div className="mt-8">
-        <img
-          src={agree ? "https://i.pinimg.com/originals/fd/d3/5e/fdd35e278f84fbff5d3ffbb197b174a8.gif" : "https://i.pinimg.com/originals/4c/ea/03/4cea031fa751e7658f5e0355def16f29.gif"}
-          alt="Thank You Animation"
-          className="w-64 h-64 animate-scale-in rounded-3xl"
-        />
+      <Image
+  src={agree ? "https://i.pinimg.com/originals/fd/d3/5e/fdd35e278f84fbff5d3ffbb197b174a8.gif" : "https://i.pinimg.com/originals/4c/ea/03/4cea031fa751e7658f5e0355def16f29.gif"}
+  alt="Thank You Animation"
+  width={256}  // Example width (adjust as needed)
+  height={256} // Example height (adjust as needed)
+  className="animate-scale-in rounded-3xl"
+/>
       </div>
 
       <style jsx>{`

@@ -33,7 +33,8 @@ const ReasonList = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-pink-500 to-purple-700 text-white relative">
       <div className="w-11/12 max-w-xl p-8 bg-white text-black rounded-lg shadow-lg text-center relative">
-        <h1 className="text-3xl font-bold mb-4">Reasons Why You're Special</h1>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        <h1 className="text-3xl font-bold mb-4">Reasons Why You&apos;re Special</h1>
         <p className="text-xl italic">{reasons[currentReason]}</p>
         <div className="mt-6 flex justify-center">
           {currentReason < reasons.length - 1 ? (
@@ -45,7 +46,7 @@ const ReasonList = () => {
             </button>
           ) : (
             <p className="text-lg font-semibold text-green-600">
-              That's why you are amazing! 💖
+              That&apos;s why you are amazing! 💖
             </p>
           )}
         </div>
@@ -54,7 +55,7 @@ const ReasonList = () => {
       {currentReason === reasons.length - 1 && (
         <div className="mt-12 text-center">
           <p className="text-xl mb-4 font-semibold">
-            I hope you've enjoyed this so far. 
+          I hope you&apos;ve enjoyed this so far.
           </p>
           <Button
             path='/interested' text='Please proceed to the next step' // Update with actual next page URL

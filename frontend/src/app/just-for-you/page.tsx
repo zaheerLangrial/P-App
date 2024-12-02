@@ -24,6 +24,7 @@ export default function JustForYou() {
   const Get_FavName_and_msgs = async () => {
     try {
       const res = await axios.get('http://127.0.0.1:8000/v1/get_fav_name_msgs/')
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       setFavNameAndMsgs(res?.data as any)
     } catch (error) {
       console.log('error', error)

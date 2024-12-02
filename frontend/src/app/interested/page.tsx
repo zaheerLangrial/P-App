@@ -4,7 +4,6 @@ import { IPQuestions } from '@/utils/types';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { message } from 'antd';
 
 const Interested = () => {
     const [date, setDate] = useState("");
@@ -52,9 +51,9 @@ const Interested = () => {
             console.log(res.data.message);
             // message.success(res.data.message);
             router.push('/thankyou');  // Replace '/next-page' with your actual route
-        } catch (error: any) {
+        } catch (error) {
             console.log('error', error);
-            message.error(error.response?.data?.message || 'Something went wrong!');
+            // message.error(error?.response?.data?.message || 'Something went wrong!');
         }
     };
 
