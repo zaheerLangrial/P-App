@@ -110,6 +110,7 @@ const Interested = () => {
                                 value={date}
                                 onChange={(e) => setDate(e.target.value)}
                                 className="block w-full mt-1 p-2 rounded-md border"
+                                min={new Date().toISOString().split('T')[0]}
                             />
                         </label>
                         <label className="block mb-2">
@@ -134,6 +135,7 @@ const Interested = () => {
                                 onChange={(e) => setReason(e.target.value)}
                                 className="block w-full mt-1 p-2 rounded-md border"
                                 rows={3}
+                            // required={true}
                             ></textarea>
                         </label>
                     </div>

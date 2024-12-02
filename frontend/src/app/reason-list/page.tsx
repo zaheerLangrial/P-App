@@ -54,7 +54,7 @@ const ReasonList = () => {
       {currentReason === reasons.length - 1 && (
         <div className="mt-12 text-center">
           <p className="text-xl mb-4 font-semibold">
-            We hope you've enjoyed this so far. 
+            I hope you've enjoyed this so far. 
           </p>
           <Button
             path='/interested' text='Please proceed to the next step' // Update with actual next page URL

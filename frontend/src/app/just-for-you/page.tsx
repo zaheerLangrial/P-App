@@ -9,7 +9,7 @@ import { FvNameAndMsgsType } from '@/utils/types';
 export default function JustForYou() {
   const [reveal, setReveal] = useState(false);
   const router = useRouter();
-  const [favNameAndMsgs , setFavNameAndMsgs] = useState<null | FvNameAndMsgsType>()
+  const [favNameAndMsgs, setFavNameAndMsgs] = useState<null | FvNameAndMsgsType>()
 
   useEffect(() => {
     if (reveal) {
@@ -21,18 +21,18 @@ export default function JustForYou() {
 
 
 
- const Get_FavName_and_msgs = async () => {
+  const Get_FavName_and_msgs = async () => {
     try {
-        const res = await axios.get('http://127.0.0.1:8000/v1/get_fav_name_msgs/')
-        setFavNameAndMsgs(res?.data as any)
+      const res = await axios.get('http://127.0.0.1:8000/v1/get_fav_name_msgs/')
+      setFavNameAndMsgs(res?.data as any)
     } catch (error) {
-        console.log('error', error)
+      console.log('error', error)
     }
-}
+  }
 
-useEffect(() => {
-  Get_FavName_and_msgs()
-},[])
+  useEffect(() => {
+    Get_FavName_and_msgs()
+  }, [])
 
 
   return (
@@ -58,7 +58,7 @@ useEffect(() => {
             {favNameAndMsgs?.sec_msg}
           </p>
           <p className="text-sm mb-8">— {favNameAndMsgs?.first_name}</p>
-          
+
           <div className="flex space-x-4">
             <button
               onClick={() => router.push('/reason-list')}

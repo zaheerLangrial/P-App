@@ -4,57 +4,58 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const ThankYou = () => {
-    const [agree, setAgree] = useState<boolean>()
+  const [agree, setAgree] = useState<boolean>()
 
 
-    const fetchAgree = async () => {
-        try {
-            const res = await axios.get('http://127.0.0.1:8000/v1/thankyou/')
-            setAgree(res.data.agree)
-        } catch (error) {
-            console.log('error', error)
-        }
+  const fetchAgree = async () => {
+    try {
+      const res = await axios.get('http://127.0.0.1:8000/v1/thankyou/')
+      setAgree(res.data.agree)
+    } catch (error) {
+      console.log('error', error)
     }
+  }
 
 
-    useEffect(() => {
-        fetchAgree()
-    })
+  useEffect(() => {
+    fetchAgree()
+  })
 
 
-    return (
-        <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-green-300 to-blue-500 text-white p-6">
-            <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-md text-center animate-fade-in">
-                {agree ? (
-                    <div>
-                        <h1 className="text-4xl font-bold mb-4 text-green-600 animate-bounce">
-                            Thank You! 🎉
-                        </h1>
-                        <p className="text-lg">
-                            Yes yahooooooooooooooo. 💖
-                        </p>
-                    </div>
-                ) : (
-                    <div>
-                        <h1 className="text-4xl font-bold mb-4 text-red-600 animate-pulse">
-                            Thank You! 🙏
-                        </h1>
-                        <p className="text-lg">
-                            Yes Yaho. 🌟
-                        </p>
-                    </div>
-                )}
-            </div>
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-green-300 to-blue-500 text-white p-6">
+      <div className="bg-white text-black p-8 rounded-lg shadow-lg max-w-md text-center animate-fade-in">
+        {agree ? (
+          <div>
+            <h1 className="text-4xl font-bold mb-4 text-green-600 animate-bounce">
+              Thank You So Much! 🎉
+            </h1>
+            <p className="text-lg">
 
-            <div className="mt-8">
-                <img
-                    src={agree ? "https://i.pinimg.com/originals/fd/d3/5e/fdd35e278f84fbff5d3ffbb197b174a8.gif" : "https://i.pinimg.com/originals/4c/ea/03/4cea031fa751e7658f5e0355def16f29.gif"}
-                    alt="Thank You Animation"
-                    className="w-64 h-64 animate-scale-in rounded-3xl"
-                />
-            </div>
+              I’m extremely happy that you trusted me enough to agree to go on a date. Please don’t worry about anything; InshaAllah, I won’t give you any reason to complain. We can plan the rest on WhatsApp, like which restaurant to go to. Again, thank you so much! 💖
+            </p>
+          </div>
+        ) : (
+          <div>
+            <h1 className="text-4xl font-bold mb-4 text-red-600 animate-pulse">
+              Thank You! 🌟
+            </h1>
+            <p className="text-lg">
+              I’m very happy that you responded so kindly to my feelings and reached this point. Thank you so much. 🌟
+            </p>
+          </div>
+        )}
+      </div>
 
-            <style jsx>{`
+      <div className="mt-8">
+        <img
+          src={agree ? "https://i.pinimg.com/originals/fd/d3/5e/fdd35e278f84fbff5d3ffbb197b174a8.gif" : "https://i.pinimg.com/originals/4c/ea/03/4cea031fa751e7658f5e0355def16f29.gif"}
+          alt="Thank You Animation"
+          className="w-64 h-64 animate-scale-in rounded-3xl"
+        />
+      </div>
+
+      <style jsx>{`
         @keyframes fade-in {
           from {
             opacity: 0;
@@ -111,8 +112,8 @@ const ThankYou = () => {
           animation: scale-in 1.5s ease-out;
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ThankYou;
