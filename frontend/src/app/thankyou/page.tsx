@@ -10,7 +10,7 @@ const ThankYou = () => {
 
   const fetchAgree = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:8000/v1/thankyou/')
+      const res = await axios.get('http://18.141.225.196:8000/v1/thankyou/')
       setAgree(res.data.agree)
     } catch (error) {
       console.log('error', error)

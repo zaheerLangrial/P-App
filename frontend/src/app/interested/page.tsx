@@ -15,7 +15,7 @@ const Interested = () => {
 
     const fetchAbout = async () => {
         try {
-            const res = await axios.get('http://127.0.0.1:8000/v1/about_me/');
+            const res = await axios.get('http://18.141.225.196:8000/v1/about_me/');
             setAboutMe(res?.data?.message);
         } catch (error) {
             console.log('error', error);
@@ -24,7 +24,7 @@ const Interested = () => {
 
     const fetchQuestions = async () => {
         try {
-            const res = await axios.get('http://127.0.0.1:8000/v1/get_questions/');
+            const res = await axios.get('http://18.141.225.196:8000/v1/get_questions/');
             setQuestions(res?.data);
         } catch (error) {
             console.log('error', error);
@@ -33,7 +33,7 @@ const Interested = () => {
 
     const handleAnswer = async (id: number, answer: boolean) => {
         try {
-            const res = await axios.post('http://127.0.0.1:8000/v1/update_question/', { id: id, ques_ans: answer });
+            const res = await axios.post('http://18.141.225.196:8000/v1/update_question/', { id: id, ques_ans: answer });
             console.log(res.data?.message);
             fetchQuestions();
         } catch (error) {
@@ -43,7 +43,7 @@ const Interested = () => {
 
     const handleSubmit = async () => {
         try {
-            const res = await axios.post('http://127.0.0.1:8000/v1/add_and_update_confirm_entry/', {
+            const res = await axios.post('http://18.141.225.196:8000/v1/add_and_update_confirm_entry/', {
                 date,
                 time,
                 reason,
