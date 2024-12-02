@@ -76,7 +76,7 @@ const ReasonList = () => {
               fontSize: `${0.8 + Math.random() * 1.5}rem`
             }}
           >
-            i
+            ❤️
           </div>
         ))}
       </div>
