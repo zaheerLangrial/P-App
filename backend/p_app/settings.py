@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'api'
 ]
 
-CSRF_TRUSTED_ORIGINS = ["*"]
+CSRF_TRUSTED_ORIGINS = ["http://18.141.225.196/"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
