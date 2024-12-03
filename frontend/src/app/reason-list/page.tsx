@@ -17,7 +17,7 @@ const ReasonList = () => {
 
   const Get_Reasons_list = async () => {
     try {
-      const res = await axios.get('http://18.141.225.196:8000/v1/get_reason_list/');
+      const res = await axios.get('http://54.169.157.67:8000/v1/get_reason_list/');
       if (res.data) {
         setReasons(SetArrayToStringArray(res.data));
       }

@@ -10,7 +10,7 @@ const ThankYou = () => {
 
   const fetchAgree = async () => {
     try {
-      const res = await axios.get('http://18.141.225.196:8000/v1/thankyou/')
+      const res = await axios.get('http://54.169.157.67:8000/v1/thankyou/')
       setAgree(res.data.agree)
     } catch (error) {
       console.log('error', error)
@@ -49,13 +49,13 @@ const ThankYou = () => {
       </div>
 
       <div className="mt-8">
-      <Image
-  src={agree ? "https://i.pinimg.com/originals/fd/d3/5e/fdd35e278f84fbff5d3ffbb197b174a8.gif" : "https://i.pinimg.com/originals/4c/ea/03/4cea031fa751e7658f5e0355def16f29.gif"}
-  alt="Thank You Animation"
-  width={256}  // Example width (adjust as needed)
-  height={256} // Example height (adjust as needed)
-  className="animate-scale-in rounded-3xl"
-/>
+        <Image
+          src={agree ? "https://i.pinimg.com/originals/fd/d3/5e/fdd35e278f84fbff5d3ffbb197b174a8.gif" : "https://i.pinimg.com/originals/4c/ea/03/4cea031fa751e7658f5e0355def16f29.gif"}
+          alt="Thank You Animation"
+          width={256}  // Example width (adjust as needed)
+          height={256} // Example height (adjust as needed)
+          className="animate-scale-in rounded-3xl"
+        />
       </div>
 
       <style jsx>{`
